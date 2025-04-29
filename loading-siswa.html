@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #1049BC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid #fff;
+            border-top: 6px solid #42a5f5;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .text {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner"></div>
+    <div class="text">Sedang memuat halaman...</div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = "dashboard-murid.html"; // Ganti ke halaman tujuan kamu
+        }, 3000); // 3 detik
+    </script>
+</body>
+
+</html>

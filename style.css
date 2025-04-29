@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 10px 0px;
+    width: 100%;
+    background-color: #E6E6E6;
+    position: fixed;
+}
+
+.navbar-placeholder {
+    height: 15vh;
+}
+
+.kiri {
+    display: flex;
+    padding: 10px 10px 10px 20px;
+}
+
+.kanan {
+    display: flex;
+    gap: 40px;
+    padding: 10px 20px 10px 10px;
+}
+
+.gambar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tulisan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Helvetica;
+    color: #1049BC;
+}
+
+.tulisan .judul {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tulisan .subjudul {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.isi-nav {
+    font-family: Helvetica;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.isi-nav a {
+    text-decoration: none;
+    color: #1049BC;
+}
+
+.atas-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 70px;
+    background-color: #D0F6FF;
+    height: 70vh;
+}
+
+.tulisan-hero {
+    text-align: center;
+}
+
+.tulisan-hero h2 {
+    font-size: 7rem;
+    font-family: Helvetica;
+}
+
+.tombol-hero {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family: Helvetica;
+    font-size: 3rem;
+    color: #ffffff;
+    background-color: #3061BD;
+    width: 15vw;
+    height: 5vw;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.visi-misi {
+    background-color: #3061BD;
+    padding: 150px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    height: 50vh;
+}
+
+.baris {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+    width: 40%;
+}
+
+.judul-visi {
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.isi-visi {
+    padding: 20px;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 1.3rem;
+}
+
+.isi-visi p {
+    color: white;
+}
+
+.Sarana {
+    background-color: #3061BD;
+    padding: 100px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    height: 50vh;
+}
+
+.program {
+    background-color: #3061BD;
+    padding: 100px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    height: 50vh;
+}
+
+footer {
+    background-color: #E6E6E6;
+}
+
+/* ======================= RESPONSIVE STYLES ======================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .kiri {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .kanan {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .tulisan .judul {
+        font-size: 1.5rem;
+    }
+
+    .tulisan .subjudul {
+        font-size: 0.9rem;
+    }
+
+    .isi-nav {
+        font-size: 1rem;
+    }
+
+    .atas-section {
+        height: auto;
+        padding: 60px 20px;
+        gap: 40px;
+    }
+
+    .tulisan-hero h2 {
+        font-size: 3rem;
+    }
+
+    button {
+        font-size: 1.5rem;
+        width: 70%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .visi-misi,
+    .program,
+    .Sarana {
+        padding: 60px 20px;
+        height: auto;
+    }
+
+    .baris {
+        width: 100%;
+    }
+
+    .isi-visi {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .judul-visi {
+        font-size: 1.2rem;
+    }
+}

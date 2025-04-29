@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="modal-login">
+                <div class="logo">
+                    <img src="./asset/logoht.png" alt="">
+                </div>
+                <div class="isian">
+                    <form action="">
+                        <input type="text" id="username" placeholder="Username">
+                        <input type="password" id="password" placeholder="Password">
+                        <select name="" id="role" >
+                            <option value="admin">Admin</option>
+                            <option value="siswa">Siswa</option>
+                            <option value="guru">Guru</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="submit">
+                    <button type="button" onclick="handleLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function handleLogin() {
+        const role = document.getElementById("role").value;
+
+        if(role === "admin") {
+            window.location.href = "loading-admin.html"
+        }else if(role === "siswa") {
+            window.location.href = "loading-siswa.html"
+        }else if (role === "guru") {
+            window.location.href = "loading-guru.html"
+        } else {
+            alert("Silahkan Pilih Role")
+        }
+    }
+</script>
+
+</html>

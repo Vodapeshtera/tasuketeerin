@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-dashboard.css">
+    <title>Data Siswa</title>
+    <!-- jsPDF (wajib) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- jsPDF AutoTable Plugin (tambahan untuk tabel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="list">
+                <a href="dashboard-murid.html">
+                    <div class="isi-list">
+                        <p>Dashboard</p>
+                    </div>
+                </a>
+                <a href="lihat-nilai.html">
+                    <div class="isi-list">
+                        <p>Lihat Nilai</p>
+                    </div>
+                </a>
+                <a href="jadwal-siswa.html">
+                    <div class="isi-list">
+                        <p>Jadwal</p>
+                    </div>
+                </a>
+                <a href="pengumuman-siswa.html">
+                    <div class="isi-list">
+                        <p>Pengumuman</p>
+                    </div>
+                </a>
+                <a href="profil-siswa.html">
+                    <div class="isi-list">
+                        <p>Profil</p>
+                    </div>
+                </a>
+            </div>
+            <div class="bawah-list">
+                <div class="isi-list">
+                    <a href="loadinglogout.html">
+                        <p>Logout</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-placeholder">
+
+        </div>
+        <div class="content">
+            <div class="atasan">
+                <h2>Lihat Nilai Siswa</h2>
+            </div>
+            <div class="bawahan">
+                <div class="main-content">
+                    <!-- <div class="baris">
+                        <marquee behavior="" direction="">Ujian Tanggal 30 Februari 2026</marquee>
+                    </div> -->
+                    <div class="baris" id="rapot-content">
+                        <div class="jadwal">
+                            <div style="text-align: center; margin-bottom: 10px; display: none;" id="judul-rapot">
+                                <h3>Rapot Bayangan</h3>
+                                <p>Nama Siswa: Agung</p>
+                                <p>Kelas: XII PPLG</p>
+                            </div>
+                            <table border="1" style="width: 100%; border-collapse: collapse;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 50%;">Mata Pelajaran</th>
+                                        <th style="width: 50%;">Nilai</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Pemrograman Dasar</td>
+                                        <td>85</td>
+                                    </tr>
+                                    <tr>
+                                        <td>PKN</td>
+                                        <td>83</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MTK</td>
+                                        <td>65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bahasa Inggris</td>
+                                        <td>90</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bahasa Indonesia</td>
+                                        <td>75</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <button onclick="generatePDF()"
+                            style="padding: 8px 12px; background-color: rgb(31, 175, 31); color: white; border: none; cursor: pointer; border-radius: 5px;">Download
+                            PDF</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function generatePDF() {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        const judulRapot = document.getElementById("judul-rapot");
+
+        doc.setFontSize(18);
+        doc.text("Rapot Siswa", 14, 20);
+
+        doc.autoTable({
+            startY: 30,
+            head: [['Mata Pelajaran', 'Nilai']],
+            body: [
+                ['Pemrograman Dasar', '85'],
+                ['PKN', '83'],
+                ['MTK', '65'],
+                ['Bahasa Inggris', '90'],
+                ['Bahasa Indonesia', '75']
+            ]
+        });
+
+        // 2. Simpan PDF
+        doc.save("rapot-murni.pdf");
+
+    }
+
+</script>
+
+</html>
