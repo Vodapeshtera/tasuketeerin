@@ -17,7 +17,7 @@ Aplikasi ini hanya tampilan doang gak ada fungsinya karena cuma buat ngetes kema
 ## 🚀 Cara Menjalankan (Development)
 1. Clone repositori:
    ```bash
-   git clone https://github.com/namauser/nama-proyek.git
+   git clone https://github.com/Vodapeshtera/tasuketeerin
 2. Buka Folder:
    cd nama-folder
 3. Run:
